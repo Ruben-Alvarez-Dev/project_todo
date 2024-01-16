@@ -69,6 +69,7 @@ section {
   outline: none;
 }
 .list-group {
+  width: 100%;
   border-radius: 4px;
   display: inline-block;
   margin: 15px 0;
@@ -77,6 +78,7 @@ section {
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 .list-group li {
+  width: 100%;
   background-color: antiquewhite;
   border-bottom: 1px solid grey;
   font-size: inherit;
@@ -84,8 +86,18 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 25px;
 }
 .delete {
   cursor: pointer;
+}
+.filteredText {
+  color: red;
+}
+.fa-trash-can {
+  padding: 5px;
+  color: red;
+  font-size: 20px;
+}
+.fa-plus {
+  color: antiquewhite;
 }
