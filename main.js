@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
   // DOM elements reference
   const formCreate = document.querySelector("#form-create");
-  const todoList = document.querySelector("#todo-list");
+  const taskList = document.querySelector("#todo-list");
   const inputCreate = document.querySelector("#create");
   const inputSearch = document.querySelector("#search");
 
@@ -13,6 +13,11 @@ window.addEventListener("load", () => {
 
   const catchValue = () => {
     const taskName = inputCreate.value.trim();
-    tareaNomre.length ? showTaskHtml(taskName) : alert("Must enter a task");
+    taskName.length ? showTaskHtml(taskName) : alert("Must enter a task");
+  };
+
+  const showTaskHtml = (taskName) => {
+    const liHtml = `<li><strong>${taskName}</strong><i class="fa-solid fa-trash-can delete"></i></li>`;
+    taskList.innerHTML += liHtml;
   };
 });
