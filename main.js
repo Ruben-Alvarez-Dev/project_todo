@@ -8,7 +8,9 @@ window.addEventListener("load", () => {
   // PROCEDURE: New task
   formCreate.addEventListener("submit", (e) => {
     e.preventDefault();
+    console.log(inputCreate.value);
     catchValue();
+    inputCreate.value = "";
   });
 
   const catchValue = () => {
@@ -17,7 +19,7 @@ window.addEventListener("load", () => {
   };
 
   const showTaskHtml = (taskName) => {
-    const liHtml = `<li><strong>${taskName}</strong><i class="fa-solid fa-trash-can delete"></i></li>`;
+    const liHtml = `<li><strong>${taskName}</strong><i class="fa-solid fa-trash-can"></i></li>`;
     taskList.innerHTML += liHtml;
   };
 
@@ -49,9 +51,10 @@ window.addEventListener("load", () => {
 
   // PROCEDURE: Delete task
   taskList.addEventListener("click", (e) => {
-    if (e.target.classList.contains("delete")) {
+    /* if (e.target.classList.contains("delete")) {
       e.target.parentElement.remove();
-    }
+    } */
+    e.target.parentElement.remove();
     inputSearch.value = "";
   });
 });

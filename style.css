@@ -32,6 +32,7 @@ body {
 .form-control input {
   border: none;
   background-color: lightgray;
+  color: rgb(46, 46, 46);
   display: block;
   font-family: inherit;
   font-size: 16px;
