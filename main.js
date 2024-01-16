@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
   const inputCreate = document.querySelector("#create");
   const inputSearch = document.querySelector("#search");
 
-  // New Item task procedure
+  // PROCEDURE: New task
   formCreate.addEventListener("submit", (e) => {
     e.preventDefault();
     catchValue();
@@ -21,7 +21,7 @@ window.addEventListener("load", () => {
     taskList.innerHTML += liHtml;
   };
 
-  // Search task procedure
+  // PROCEDURE: Search task
   inputSearch.addEventListener("keyup", (e) => {
     const character = inputSearch.value.trim();
     search(character);
@@ -46,4 +46,12 @@ window.addEventListener("load", () => {
         filteredString.classList.remove("filteredText");
       });
   };
+
+  // PROCEDURE: Delete task
+  taskList.addEventListener("click", (e) => {
+    if (e.target.classList.contains("delete")) {
+      e.target.parentElement.remove();
+    }
+    inputSearch.value = "";
+  });
 });
