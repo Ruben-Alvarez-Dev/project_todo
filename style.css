@@ -91,7 +91,8 @@ section {
   cursor: pointer;
 }
 .filteredText {
-  color: red;
+  display: none !important;
+  /* color: red; */
 }
 .fa-trash-can {
   padding: 5px;
